@@ -1,6 +1,7 @@
 from app import db, models
 
 db.create_all()  # initializes the tables
+db.session.commit()
 
 alex = models.User('aharelick', 'alexharelick@gmail.com')
 not_alex = models.User('notalex', 'notalex@gmail.com')
