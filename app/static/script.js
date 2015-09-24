@@ -1,3 +1,6 @@
 $(function() {
-  console.log('Script works!');
+ var map = new GMaps({
+    div: '#map'
+ });
 });
+

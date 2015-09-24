@@ -6,10 +6,14 @@
     
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
-  </head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFhn985TSdmqGS8CLeFQX7N-LylRDJUuc">
+    </script>
+   <script type="text/javascript" src="{{ url_for('static', filename='gmaps.js') }}"></script>
+   <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
   <body>
     <h1>It's like...</h1>
     <h2>{{ name }}</h2>
+    <div id="map"></div>
   </body>
 </html>
