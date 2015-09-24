@@ -14,3 +14,12 @@ class Coordinate(db.Model):
 
     def __repr__(self):
         return '<Coordinate (%r, %r)>' % (self.latitude, self.longitude)
+
+    def serialize(self):
+        '''Returns coord in an easily serializable format'''
+        '''Is this the right way to do this??'''
+        return {
+            'latitude': self.latitude,
+            'longitude': self.longitude,
+            'notes': self.notes
+        }
