@@ -6,7 +6,7 @@ from models import Coordinate
 @app.route('/', methods=['GET'])
 def index():
     name = 'Tinder for Treasure'
-    coords = [Coordinate(-12, -77, "testing")]
+    coords = [Coordinate(-12, -77, "testing"), Coordinate(-12.01, -77.0001, "test2")]
     return render_template('home.html', name=name, coordinates=coords)
 
 
