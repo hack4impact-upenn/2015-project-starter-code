@@ -11,5 +11,16 @@
   <body>
     <h1>It's like...</h1>
     <h2>{{ name }}</h2>
+
+    {# ESTABLISH coordinates VARIABLE #}
+    {% if coordinates %}
+    <script type="text/javascript" charset="utf-8">
+      var coordinates = {{coordinates|safe}}
+    </script>
+    {% else %}
+    <script type="text/javascript" charset="utf-8">
+      var coordinates = []
+    </script>
+    {% endif %}
   </body>
 </html>
