@@ -1,0 +1,10 @@
+html {
+  height: 100%;
+  background-color: #eee;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+}
