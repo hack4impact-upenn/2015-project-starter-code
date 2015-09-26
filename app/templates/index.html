@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Treasure Hunt - Hack4Impact Abhinav Suri</title>
+		<meta name="description" content="A small treasuremap puzzle">
+		<meta name="author" content="Abhinav Suri">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
+  		<link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+     
+  		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  		<script src="https://maps.googleapis.com/maps/api/js"></script>
+       <script src="{{ url_for('static',filename='js/scripts.js') }}"></script>
+  		{% if coordinates %}
+  		<script>
+  		 coordinates = {{coordinates | safe}}
+  		</script>
+  		{% else %}
+  		<script>
+  		 coordinates = []
+  		</script>
+  		{% endif %}
+  		<script>
+
+    </script>
+
+    
+  	</head>
+  	<body>
+  		<div class="container">
+    		<div class="row">
+      			<div class="one-half column" style="margin-top: 25%">
+        			<h1 id="header">Treasure Hunt!</h1>
+        			<p id="description1">Welcome to <b>Treasure Hunt</b>, a <a href="http://hack4impact.org/" target="_blank">Hack4Impact</a> project created by Abhinav Suri.</p>
+      			</div>
+      			<div class="one-half column" style="margin-top: 15%">
+        			<div id="map">
+        			</div>
+      			</div>
+    		</div>
+  		</div>
+  	</body>
+  	<style>
+  		#map{
+  			width:100%;
+  			height:50vh;
+  			background-color:#CCC;
+  		}
+  	</style>
+ <script>
+ var tween1 = TweenLite.from($("#header"), 1.5, {y:-100,opacity: .5, ease: Bounce.easeOut})
+    var tween2 = TweenLite.from($("#description1"), 0.5, {x:-50,opacity: 0,delay:1.5})
+    var tween3 = TweenLite.from($("#map"), 0.5, {opacity: 0,delay:1.5})
+    </script>
+</html>
